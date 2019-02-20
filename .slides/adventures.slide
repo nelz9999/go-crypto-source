@@ -1,16 +1,14 @@
-Adventures in "rand" Land
+A Tale of Two "rand"s
 Making math/rand and crypto/rand play nice together
-4 Jun 2017
+
 Tags: rand, math, crypto
 
-Nelz
-@nelz9999
+Nelz Carpentier
 
-Services Team Lead, Orion Labs
-nelz@orionlabs.io
-https://www.orionlabs.io/
+Internal Tools Team, Cloudflare
+nelz@cloudflare.com
 
-https://github.com/onbeep/go-crypto-source/
+https://github.com/nelz9999/go-crypto-source/
 
 * Let's look at math/rand (alias `mrand`)
 
@@ -19,7 +17,6 @@ https://github.com/onbeep/go-crypto-source/
 - fairly friendly API
 - useful right out of the box
 
-    func ExpFloat64() float64
     func Float32() float32
     func Float64() float64
     func Int() int
@@ -28,12 +25,14 @@ https://github.com/onbeep/go-crypto-source/
     func Int63() int64
     func Int63n(n int64) int64
     func Intn(n int) int
-    func NormFloat64() float64
-    func Perm(n int) []int
     func Read(p []byte) (n int, err error)
-    func Seed(seed int64)
     func Uint32() uint32
     func Uint64() uint64
+
+    func ExpFloat64() float64
+    func NormFloat64() float64
+
+    func Perm(n int) []int
 
 
 * Cons
@@ -202,7 +201,7 @@ Non-deterministic random is a tradeoff
 
 * Thank You!
 
-Available at [[https://github.com/onbeep/go-crypto-source/]]:
+Available at [[https://github.com/nelz9999/go-crypto-source/]]:
 - Slides
 - Source code
 - A more polished API
